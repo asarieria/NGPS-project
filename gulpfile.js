@@ -11,6 +11,7 @@ global.$ = {
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
+  spritesmith: require('gulp.spritesmith'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
