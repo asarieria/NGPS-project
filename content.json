@@ -1,0 +1,7 @@
+{
+	"pages" : {
+		"Обо мне": "/about.html",
+		"Главная": "/index.html",
+		"Контакты": "/contacts.html"
+	}
+}
