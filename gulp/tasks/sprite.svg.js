@@ -2,7 +2,7 @@
 
 module.exports = function() {
   $.gulp.task('sprite:svg', function() {
-    return $.gulp.src('./source/sprite/*.svg')
+    return $.gulp.src('./source/sprite/svg/*.svg')
       .pipe($.gp.svgmin({
         js2svg: {
           pretty: true
@@ -13,7 +13,6 @@ module.exports = function() {
           $('[fill]').removeAttr('fill');
           $('[stroke]').removeAttr('stroke');
           $('[style]').removeAttr('style');
-          $('svg').attr('style',  'display:none');
         },
         parserOptions: { xmlMode: true }
       }))
@@ -24,8 +23,8 @@ module.exports = function() {
             sprite: "../symbol_sprite.html"
           }
         },
-        selector: "icon-%f"
+        selector: 'icon-%f'
       }))
-      .pipe($.gulp.dest($.config.root + '/assets/img'))
+      .pipe($.gulp.dest($.config.root + '/assets/sprite'))
   })
 };
