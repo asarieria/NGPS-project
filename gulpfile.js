@@ -11,7 +11,9 @@ global.$ = {
   },
   gulp: require('gulp'),
   rimraf: require('rimraf'),
-  svgSprite: require('gulp-svg-sprite'),
+  svgIcons: require('gulp-svg-sprites'),
+  SVGSprite: require('gulp-svg-sprite'),
+  gulpIf: require('gulp-if'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()
 };
@@ -30,7 +32,8 @@ $.gulp.task('default', $.gulp.series(
     'copy:image',
     'css:foundation',
     'sprite:svg',
-    'sprite:img',
+    'sprite:svg-icon',
+    'sprite:png',
     'fonts'
   ),
   $.gulp.parallel(

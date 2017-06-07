@@ -1,0 +1,18 @@
+%svg-common {
+	background: url("../img/sprite/sprite.svg") no-repeat;
+}
+
+.svg-2 {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 262px;
+	height: 364px;
+}
+
+.svg-6 {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 269px;
+	height: 364px;
+}
+
