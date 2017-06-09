@@ -1,0 +1,20 @@
+mixin head(data)
+    title= data.title
+    //- meta block
+    meta(charset="utf-8")
+    meta(content=data.author name="author")
+    meta(content=data.description name="description")
+    meta(content=data.keywords name="keywords")
+    meta(content="width=device-width, initial-scale=1" name="viewport")
+    meta(content="ie=edge" http-equiv="x-ua-compatible")
+
+    //- favicon block start
+    link(rel='shortcut icon', href='/assets/img/favicon/favicon.png', type='image/x-icon')
+    link(rel='apple-touch-icon', href='/assets/img/favicon/apple-touch-icon.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='assets/img/favicon/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='assets/img/favicon/apple-touch-icon-114x114.png')
+    //- favicon block end
+
+    //- CSS Block
+    link(rel="stylesheet", href="/assets/css/style.css")
+    link(rel='stylesheet' href='/assets/css/vendor.css')

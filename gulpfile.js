@@ -13,6 +13,7 @@ global.$ = {
   rimraf: require('rimraf'),
   svgIcons: require('gulp-svg-sprites'),
   SVGSprite: require('gulp-svg-sprite'),
+  spritesmith: require('gulp.spritesmith'),
   gulpIf: require('gulp-if'),
   browserSync: require('browser-sync').create(),
   gp: require('gulp-load-plugins')()

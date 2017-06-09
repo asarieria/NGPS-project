@@ -1,0 +1,25 @@
+.page-header {
+	color: #fff;
+	background-image: $main-gradient;
+	height: rem(70px);
+	line-height: rem(70px);
+
+	&__wrap {
+		@include container
+	}
+
+	&-item {
+
+		&__icon {
+			margin-right: rem(7px);
+
+			&:before {
+				background-image: $accent-gradient;
+				-webkit-background-clip: text;
+				color: transparent;
+			}
+
+		}
+
+	}
+}

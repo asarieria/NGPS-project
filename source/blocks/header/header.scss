@@ -1,25 +1,27 @@
-body {
-	background-color: #000;
-}
 .header {
-	min-height: 100%;
-	height: 10vh;
-	background-color: #f5f;
-}
-.icon-bull {
-	display: block;
-	width: 40px;
-	height: 40px;
-	position: relative;
-	z-index: 999;
-	background: #fec
-}
-#svgicon-bull {
-	path {
-	fill: black;
+	padding: rem(15px) 0;
+	background-color: #fff;
+	&__container {
+		@include container;
+	}
+
+	&__logo,
+	&__btn {
+		@include col(3)
 	}
 }
 
-.svg-icon2 {
-	@extend .svg-2 ;
+.main-nav {
+	line-height: rem(40px);
+
+	&__item {
+		display: inline-block;
+		margin: 0 rem(15px)
+	}
+
+	&__link {
+		color: #000
+	}
+
 }
+

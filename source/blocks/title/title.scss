@@ -1,0 +1,22 @@
+.title {
+
+	&__text {
+	font-size: rem(50px);
+	font-weight: 900;
+	line-height: 1.4;
+	letter-spacing: rem(2.6px);
+	text-transform: uppercase;
+
+	&:before {
+		content: '';
+		display: block;
+		height: rem(10px);
+		width: rem(60px);
+		opacity: 0.5;
+		border-radius: 2px;
+		background-image: $accent-gradient;
+	}
+
+	}
+
+}

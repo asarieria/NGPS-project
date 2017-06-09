@@ -1,9 +1,59 @@
 extends ../_template
 
+
+include ../../blocks/top-head/top-head.pug
 include ../../blocks/header/header.pug
+include ../../blocks/title/title.pug
+include ../../blocks/intro/intro.pug
+include ../../blocks/footer/footer.pug
 
-block variables
-	- var title = 'Главная страница'
+block head
+	head
+		+head({
+			"title":       "Главная страница",
+			"author":      "Автор",
+			"description": "Описание",
+			"keywords":    "Ключевые слова"
+		})
 
-block pagecontent
-	+header()
+block header
+	header
+		+top-head()
+
+		+header({
+			"menu": [
+				{
+					"text": "Главная",
+					"href": "index.html"
+				},
+				{
+					"text": "О нас",
+					"href": "index.html"
+				},
+				{
+					"text": "Услуги",
+					"href": "index.html"
+				},
+				{
+					"text": "Информация",
+					"href": "index.html"
+				},
+				{
+					"text": "Блог",
+					"href": "index.html"
+				},
+				{
+					"text": "Контакты",
+					"href": "index.html"
+				}
+			]
+		})
+		
+		+intro()
+
+block content
+	//- бэм блоки
+
+block footer
+
+	+footer()

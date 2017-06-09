@@ -1,18 +1,32 @@
 %svg-common {
-	background: url("../img/sprite/sprite.svg") no-repeat;
+	background: url("./build/assets/img/static/sprite.svg") no-repeat;
 }
 
-.svg-2 {
+.svg-mouse {
 	@extend %svg-common;
 	background-position: 0 0;
-	width: 262px;
-	height: 364px;
+	width: 14px;
+	height: 23px;
 }
 
-.svg-6 {
+.svg-prod1 {
+	@extend %svg-common;
+	background-position: 0 28.395061728395063%;
+	width: 41px;
+	height: 52px;
+}
+
+.svg-star {
+	@extend %svg-common;
+	background-position: 0 63.559322033898304%;
+	width: 16px;
+	height: 15px;
+}
+
+.svg-why1 {
 	@extend %svg-common;
 	background-position: 0 100%;
-	width: 269px;
-	height: 364px;
+	width: 50px;
+	height: 43px;
 }
 

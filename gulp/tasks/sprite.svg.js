@@ -1,8 +1,10 @@
 'use strict';
 
+// Таск для спрайтов, с неизменяемыми свойствами css.
+// CSS режим
 module.exports = function() {
   $.gulp.task('sprite:svg', function() {
-    return $.gulp.src('./source/img/sprite/svg/*.svg')
+    return $.gulp.src('./source/img/sprite/static/*.svg')
       .pipe($.SVGSprite({
         mode: {
           css: {
@@ -19,6 +21,6 @@ module.exports = function() {
           }
         }
         }))
-      .pipe($.gulpIf('*.scss', $.gulp.dest('./tmp/sprite'), $.gulp.dest($.config.root + '/assets/img/sprite/')));
+      .pipe($.gulpIf('*.scss', $.gulp.dest('./tmp/sprite'), $.gulp.dest($.config.root + '/assets/img/static/')));
   });
 };

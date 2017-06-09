@@ -5,7 +5,6 @@ module.exports = function() {
     return $.gulp.src('./source/style/style.scss')
       .pipe($.gp.sourcemaps.init())
       .pipe($.gp.sass({
-      	// import: process.cwd() + './tmp/sprite/sprite.scss', // Это для спрайтов .svg
       	outputStyle: 'compressed'
       })).on('error', $.gp.notify.onError({ title: 'Style' }))
       .pipe($.gp.autoprefixer({ browsers: $.config.autoprefixerConfig }))

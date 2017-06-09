@@ -1,7 +1,12 @@
-mixin header()
-	.header
-		| header
-		svg.icon-bull
-			use(xlink:href='#svgicon-bull')
-
-		.svg-icon2
+mixin header(data)
+	+b.header
+		+e.container
+			+e.logo
+				+b.A.logo(href="###")
+					+e.IMG.img(src="assets/img/logo.svg")
+			+b.NAV.main-nav
+				+e.UL.lists
+				each item in data.menu
+					+e.LI.item
+						+e.A.link(href=item.href)= item.text
+			+b.A.btn.--header(href="###") Заявка на просчет

@@ -1,0 +1,54 @@
+.intro {
+	height: 600px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: #fff;
+	z-index: 1;
+	background-image: $main-gradient;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-image: url(../img/intro.jpg);
+		background-size: cover;
+		opacity: .41;
+		mix-blend-mode: overlay;
+	}
+
+	&__info {
+		@include col(9)
+	}
+
+	&__stat {
+		@include col(3)
+	}
+
+	&__container {
+		@include container
+	}
+
+	&-info {
+		&__text {
+			line-height: 1.67;
+			font-weight: 900;
+			margin: rem(22px) 0 rem(65px);
+		}
+	}
+	&-stat {
+		line-height: 1.4;
+		text-align: center;
+		margin-bottom: rem(40px);
+		&__num {
+			font-size: rem(48px)
+		}
+		>span {
+			display: block;
+			font-weight: 900;
+		}
+	}
+}

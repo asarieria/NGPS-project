@@ -1,0 +1,40 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0
+}
+
+// rem работает от размера шрифта html
+// если потом поменять размер шрифта у html документа, все увеличиться пропорционально
+// вычислить rem (number px / 16) = rem
+// прописывать для отступов, ширины, высоты и размеров шрифтов
+html {
+	font-size: 16px;
+}
+
+.main-page {
+	color: #4a4a4a;
+	font-family: "Supermolot";
+	&__wrap {
+		min-width: 320px;
+		max-width: 1920px;
+		margin: 0 auto;
+	}
+}
+
+.grid-view {
+	@include add-grid(12);
+	@include add-gutter(1/3);
+	@include add-gutter-style('split');
+	@include sgs-change('debug', true);
+	@include background-grid($color: rgba(187, 143, 206, .2));
+	width: 1200px;
+	margin: 0 auto;
+	min-height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: -9999
+}
+

@@ -1,7 +1,34 @@
-@import "variables";
-@import "mixin";
+// breakpoint
+@import "./bower_components/singularity/stylesheets/_singularitygs.scss";
+@import "./bower_components/breakpoint-sass/stylesheets/_breakpoint";
 
-// // BEM BLOCKS
+// tmp
+@import "./tmp/sprite/sprite.scss";
+@import "./tmp/sprite/symbol/dynamic_sprite.scss";
+@import "./tmp/icons/png-sprite.scss";
+
+// _base
+@import "_base/variables";
+@import "_base/mixin";
+@import "_base/reset";
+@import "_base/grid";
+@import "_base/fonts";
+
+// main
+@import "scaffolding.scss";
+
+// layout
+@import "layout/btn.scss";
+
+// bem
+@import "../blocks/top-head/top-head.scss";
 @import "../blocks/header/header.scss";
+@import "../blocks/intro/intro.scss";
+@import "../blocks/title/title.scss";
 
-@import "../../tmp/sprite/sprite.scss";
+
+// Примеры
+// @include breakpoint(1200px)
+// $breakpoint-default-feature: max-width; - desktop first method (ставим в конце стилей)
+// svg - @extend .svg-icon
+// png - @include sprite($case)
